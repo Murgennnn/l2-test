@@ -1,12 +1,15 @@
 'use strict';
-const { createServer } = require('node:http');
-const hostname = '127.0.0.1';
-const port = 3000;
-const server = createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
+const express = require('express');
+const app = express();
+const http = require('http');
+const _server = http.createServer(app);
+const { Server } = require("socket.io");
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
 });
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+
+_server.listen(3000, async () => {
+    console.log('listening on *:3000');
+    server.addSpawn();
 });
