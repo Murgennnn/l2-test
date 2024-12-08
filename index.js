@@ -10,6 +10,5 @@ app.get('/', (req, res) => {
 });
 
 _server.listen(3000, async () => {
-    console.log('listening on *:3000');
-    server.addSpawn();
+    console.log('listening on *:8080');
 });
