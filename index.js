@@ -7,7 +7,7 @@ const { Server } = require("socket.io");
 const io = new Server(_server);
 const fs = require("fs");
 
-const ServFunc = require('./scripting/server.js');
+//const ServFunc = require('./scripting/server.js');
 global.server = new ServFunc(io);
 
 app.get('/', (req, res) => {
