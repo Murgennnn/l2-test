@@ -6,7 +6,7 @@ const path = require('path');
 const app = express();
 
 const TelegramBot = require('node-telegram-bot-api');
-const token = '7519170735:AAFKuhy-oaNX2tIDvGSi5Tko1MzkIrPHZZw';
+const token = '';
 const bot = new TelegramBot(token, { polling: true });
 
 // Настройка маршрутов и middleware
